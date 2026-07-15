@@ -26,6 +26,7 @@ function revealContact() {
 
     if (!section || !cards.length) return;
 
+    const isMobile = window.innerWidth <= 768;
 
     const timeline = gsap.timeline({
 
@@ -54,15 +55,20 @@ function revealContact() {
 
     })
 
-    .from(".contact__info", {
-
-        x: -60,
-
-        duration: .8,
-
-        ease: "power3.out"
-
-    })
+    .from(
+        ".contact__info",
+        isMobile
+            ? {
+                y: 30,
+                duration: .8,
+                ease: "power3.out"
+            }
+            : {
+                x: -60,
+                duration: .8,
+                ease: "power3.out"
+            }
+    )
 
     .from(cards, {
 
@@ -76,14 +82,39 @@ function revealContact() {
 
     }, "-=0.4")
 
-    .from(".contact__form", {
+    .fromTo(
+        ".contact__form",
+        isMobile
+            ? {
+                y: 30,
+                scale: .98
+            }
+            : {
+                x: 60
+            },
+        {
+            x: 0,
+            y: 0,
+            scale: 1,
+            duration: .8,
+            ease: "power3.out",
+            clearProps: "transform"
+        },
+        "-=0.5"
+    );
 
-        x: 60,
+    window.addEventListener("resize", () => {
 
-        duration: .8,
+        if (window.innerWidth <= 768) {
 
-        ease: "power3.out"
+            gsap.set(".contact__info, .contact__form", {
 
-    }, "-=0.5");
+                clearProps: "transform"
+
+            });
+
+        }
+
+    });
 
 }
