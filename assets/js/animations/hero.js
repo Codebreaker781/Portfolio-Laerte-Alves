@@ -24,6 +24,8 @@ function heroReveal() {
 
     if (!hero) return;
 
+    const isMobile = window.innerWidth <= 768;
+
     const timeline = gsap.timeline({
 
         defaults: {
@@ -74,11 +76,17 @@ function heroReveal() {
 
     .fromTo(
         ".player-card",
+        isMobile
+            ? {
+                y: 30,
+                scale: .95
+            }
+            : {
+                scale: .85,
+                rotate: -8
+            },
         {
-            scale: .85,
-            rotate: -8
-        },
-        {
+            y: 0,
             scale: 1,
             rotate: 0,
             duration: 1,
@@ -90,11 +98,16 @@ function heroReveal() {
 
     .fromTo(
         ".hud-panel",
-        {
-            x: 80
-        },
+        isMobile
+            ? {
+                y: 30
+            }
+            : {
+                x: 80
+            },
         {
             x: 0,
+            y: 0,
             duration: .8,
             ease: "power3.out",
             clearProps: "transform"
@@ -253,6 +266,20 @@ function heroParallax() {
             orb.style.transform = "";
 
         });
+
+    });
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth <= 992) {
+
+            gsap.set(".player-card, .hud-panel", {
+
+                clearProps: "transform"
+
+            });
+
+        }
 
     });
 
