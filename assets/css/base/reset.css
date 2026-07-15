@@ -1,0 +1,180 @@
+/* ==========================================================
+   RESET.CSS
+   ========================================================== */
+
+/* ------------------------------
+   Reset Universal
+--------------------------------*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------
+   HTML
+--------------------------------*/
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+/* ------------------------------
+   Body
+--------------------------------*/
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------
+   Imagens
+--------------------------------*/
+img,
+picture,
+svg,
+canvas,
+video {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+/* ------------------------------
+   Inputs
+--------------------------------*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* ------------------------------
+   Botões
+--------------------------------*/
+button {
+    cursor: pointer;
+    color: inherit;
+}
+
+/* ------------------------------
+   Links
+--------------------------------*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------------------------------
+   Listas
+--------------------------------*/
+ul,
+ol {
+    list-style: none;
+}
+
+/* ------------------------------
+   Títulos
+--------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* ------------------------------
+   Tabelas
+--------------------------------*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ------------------------------
+   Textarea
+--------------------------------*/
+textarea {
+    resize: none;
+}
+
+/* ------------------------------
+   Elementos ocultos
+--------------------------------*/
+[hidden] {
+    display: none !important;
+}
+
+/* ------------------------------
+   Seleção de texto
+--------------------------------*/
+::selection {
+    background: rgba(123, 46, 255, 0.35);
+}
+
+/* ------------------------------
+   Scrollbar
+   (Chrome, Edge e Safari)
+--------------------------------*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(123, 46, 255, .55);
+    transition: .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, .9);
+}
+
+/* ------------------------------
+   Firefox
+--------------------------------*/
+* {
+    scrollbar-width: thin;
+}
+
+/* ------------------------------
+   Focus acessível
+--------------------------------*/
+:focus-visible {
+    outline: 2px solid #A855F7;
+    outline-offset: 4px;
+}
+
+/* ------------------------------
+   Redução de movimento
+--------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

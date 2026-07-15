@@ -1,0 +1,172 @@
+/* ==========================================================
+   BUTTON.CSS
+   Projeto: Portfólio Laerte Alves
+========================================================== */
+
+.btn{
+
+    position:relative;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    padding:1rem 2rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    font-family:var(--font-primary);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    user-select:none;
+
+    isolation:isolate;
+
+}
+
+/* ==========================================
+   Glow
+========================================== */
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        120deg,
+        transparent 25%,
+        rgba(255,255,255,.25) 50%,
+        transparent 75%
+    );
+
+    transform:translateX(-130%);
+
+    transition:transform .8s ease;
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   Hover
+========================================== */
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn:hover::before{
+
+    transform:translateX(130%);
+
+}
+
+/* ==========================================
+   Active
+========================================== */
+
+.btn:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================================
+   Primário
+========================================== */
+
+.btn--primary{
+
+    color:white;
+
+    background:var(--gradient-primary);
+
+    box-shadow:0 0 25px rgba(123,46,255,.45);
+
+}
+
+.btn--primary:hover{
+
+    box-shadow:
+        0 0 15px rgba(123,46,255,.55),
+        0 0 40px rgba(123,46,255,.45);
+
+}
+
+/* ==========================================
+   Secundário
+========================================== */
+
+.btn--secondary{
+
+    color:var(--color-text);
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(14px);
+
+}
+
+.btn--secondary:hover{
+
+    border-color:rgba(123,46,255,.55);
+
+    box-shadow:
+
+        0 0 18px rgba(123,46,255,.30);
+
+}
+
+/* ==========================================
+   Focus
+========================================== */
+
+.btn:focus-visible{
+
+    outline:2px solid var(--color-primary-light);
+
+    outline-offset:4px;
+
+}
+
+/* ==========================================
+   Disabled
+========================================== */
+
+.btn:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}

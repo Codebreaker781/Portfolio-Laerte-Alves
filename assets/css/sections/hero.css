@@ -1,0 +1,845 @@
+/* ==========================================================
+   HERO SECTION
+   Projeto: Portfólio Laerte Alves
+   Arquivo: hero.css
+========================================================== */
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding-top: var(--header-height);
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.hero .container {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    align-items: center;
+
+    gap: clamp(3rem, 5vw, 6rem);
+
+    width: 100%;
+
+    z-index: 10;
+
+}
+
+/* ==========================================================
+   CONTEÚDO
+========================================================== */
+
+.hero__content {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+}
+
+/* ==========================================================
+   TAG
+========================================================== */
+
+.hero__tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+    margin-bottom: 2rem;
+
+    padding: .75rem 1.3rem;
+
+    border-radius: 999px;
+
+    background: rgba(123,46,255,.10);
+
+    border: 1px solid rgba(123,46,255,.35);
+
+    backdrop-filter: blur(18px);
+
+    font-family: var(--font-code);
+
+    font-size: .82rem;
+
+    letter-spacing: .18rem;
+
+    text-transform: uppercase;
+
+    color: var(--color-primary-light);
+
+}
+
+.hero__tag::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00E676;
+
+    box-shadow:
+
+        0 0 12px #00E676,
+
+        0 0 22px #00E676;
+
+}
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.hero__title {
+
+    margin-bottom: 1.2rem;
+
+    font-size: clamp(3.8rem, 8vw, 7rem);
+
+    line-height: .92;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+}
+
+.hero__title span{
+
+    display:block;
+
+}
+
+/* ==========================================================
+   SUBTÍTULO
+========================================================== */
+
+.hero__subtitle {
+
+    max-width: 620px;
+
+    margin-bottom: 2.5rem;
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+    color: var(--color-text-secondary);
+
+}
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.hero__buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1.2rem;
+
+}
+
+/* ==========================================================
+   VISUAL
+========================================================== */
+
+.hero__visual{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.hero__background{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.hero__grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+    background-size:60px 60px;
+
+    mask-image:
+
+        radial-gradient(circle, black 35%, transparent 95%);
+
+    opacity:.45;
+
+}
+
+/* ==========================================================
+   GLOW
+========================================================== */
+
+.hero__glow{
+
+    position:absolute;
+
+    top:-250px;
+
+    right:-220px;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(123,46,255,.28),
+
+            transparent 70%
+
+        );
+
+    filter:blur(70px);
+
+    will-change: transform;
+
+}
+
+/* ==========================================================
+   LINHAS
+========================================================== */
+
+.hero__line{
+
+    position:absolute;
+
+    width:260px;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(123,46,255,.8),
+
+            transparent
+
+        );
+
+    opacity:.5;
+
+}
+
+.hero__line:nth-child(3){
+
+    top:18%;
+
+    left:-120px;
+
+}
+
+.hero__line:nth-child(4){
+
+    bottom:20%;
+
+    right:-120px;
+
+}
+
+/* ==========================================================
+   PLAYER CARD
+========================================================== */
+
+.hero__visual .player-card{
+
+    position:relative;
+
+    z-index:15;
+
+}
+
+/* ==========================================================
+   HUD PANEL
+========================================================== */
+
+.hero__visual .hud-panel{
+
+    position:absolute;
+
+    right:-70px;
+
+    bottom:40px;
+
+    width:260px;
+
+    z-index:20;
+
+}
+
+/* ==========================================================
+   CÍRCULO PRINCIPAL
+========================================================== */
+
+.hero__visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:620px;
+
+    height:620px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(123,46,255,.15);
+
+    animation:rotateCircle 40s linear infinite;
+
+}
+
+/* ==========================================================
+   SEGUNDO CÍRCULO
+========================================================== */
+
+.hero__visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(255,255,255,.08);
+
+    animation:rotateCircleReverse 28s linear infinite;
+
+}
+
+/* ==========================================================
+   ORBS
+========================================================== */
+
+.hero__orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(12px);
+
+    animation: orbFloat 8s ease-in-out infinite;
+
+    will-change: transform;
+
+}
+
+.hero__orb--1{
+
+    width:90px;
+
+    height:90px;
+
+    top:10%;
+
+    right:15%;
+
+    background:rgba(123,46,255,.35);
+
+}
+
+.hero__orb--2{
+
+    width:45px;
+
+    height:45px;
+
+    bottom:12%;
+
+    left:8%;
+
+    background:rgba(130,90,255,.55);
+
+    animation-delay:2s;
+
+}
+
+.hero__orb--3{
+
+    width:24px;
+
+    height:24px;
+
+    top:55%;
+
+    right:4%;
+
+    background:#ffffff33;
+
+    animation-delay:4s;
+
+}
+
+/* ==========================================================
+   DECORAÇÃO
+========================================================== */
+
+.hero__decor{
+
+    position:absolute;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(8px);
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.hero__decor--square{
+
+    width:80px;
+
+    height:80px;
+
+    top:18%;
+
+    left:5%;
+
+    transform:rotate(45deg);
+
+}
+
+.hero__decor--line{
+
+    width:180px;
+
+    height:2px;
+
+    bottom:18%;
+
+    right:10%;
+
+    border:none;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(123,46,255,.8),
+        transparent
+    );
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:1100px){
+
+    .hero{
+
+        padding:8rem 0 5rem;
+
+    }
+
+    .hero .container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero__content{
+
+        align-items:center;
+
+    }
+
+    .hero__subtitle{
+
+        margin-inline:auto;
+
+    }
+
+    .hero__visual{
+
+        margin-top:4rem;
+
+        min-height:580px;
+
+    }
+
+    .hero__visual .hud-panel{
+
+        position:relative;
+
+        right:auto;
+
+        bottom:auto;
+
+        margin-top:2rem;
+
+        width:320px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero__content{
+        
+        width: 100%;
+
+        padding: 0 5%;
+
+        max-width: 100%;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .hero__buttons .btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .hero__buttons{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:1rem;
+
+    }
+
+    .hero__title{
+
+        font-size:3rem;
+
+    }
+
+    .hero__subtitle{
+
+        font-size:1rem;
+
+    }
+
+    .hero__buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero__visual {
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:1rem;
+
+    }
+
+    .player-card,
+    .hud-panel{
+
+        width:100%;
+
+        max-width:340px;
+
+    }
+
+    .hero__visual::before{
+
+        width:380px;
+
+        height:380px;
+
+    }
+
+    .hero__visual::after{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+}
+
+/* ==========================================================
+   HERO ANIMATIONS
+========================================================== */
+
+/* Rotação dos círculos */
+
+@keyframes rotateCircle {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes rotateCircleReverse {
+
+    from {
+
+        transform: rotate(360deg);
+
+    }
+
+    to {
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+/* Flutuação das partículas */
+
+@keyframes orbFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-18px);
+
+    }
+
+}
+
+/* Pulso do glow */
+
+@keyframes heroGlow {
+
+    0%,
+    100% {
+
+        opacity: .45;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: .85;
+
+        transform: scale(1.08);
+
+    }
+
+}
+
+/* Movimento das linhas */
+
+@keyframes linePulse {
+
+    0% {
+
+        opacity: .15;
+
+        transform: scaleX(.4);
+
+    }
+
+    50% {
+
+        opacity: .8;
+
+        transform: scaleX(1);
+
+    }
+
+    100% {
+
+        opacity: .15;
+
+        transform: scaleX(.4);
+
+    }
+
+}
+
+/* Pequeno brilho passando pela tag */
+
+@keyframes tagShine {
+
+    from {
+
+        transform: translateX(-150%);
+
+    }
+
+    to {
+
+        transform: translateX(150%);
+
+    }
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES APLICADAS
+========================================================== */
+
+.hero__glow {
+
+    animation: heroGlow 6s ease-in-out infinite;
+
+}
+
+.hero__line {
+
+    animation: linePulse 5s ease-in-out infinite;
+
+}
+
+.hero__line:nth-child(3) {
+
+    animation-delay: 1s;
+
+}
+
+.hero__line:nth-child(4) {
+
+    animation-delay: 2.5s;
+
+}
+
+/* Brilho da tag */
+
+.hero__tag {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.hero__tag::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform: translateX(-150%);
+
+    animation: tagShine 6s linear infinite;
+
+}

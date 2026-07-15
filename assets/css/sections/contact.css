@@ -1,0 +1,455 @@
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.contact {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 8rem 0;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(123, 46, 255, .08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(0, 212, 255, .06),
+            transparent 40%
+        );
+
+}
+
+
+/* ==========================================================
+   WRAPPER
+========================================================== */
+
+.contact__wrapper {
+
+    display: grid;
+
+    grid-template-columns: 380px 1fr;
+
+    gap: 3rem;
+
+    margin-top: 4rem;
+
+    align-items: start;
+
+}
+
+
+/* ==========================================================
+   INFO
+========================================================== */
+
+.contact__info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+}
+
+
+/* ==========================================================
+   CONTACT CARD
+========================================================== */
+
+.contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.25rem;
+
+    padding: 1.5rem;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    backdrop-filter: blur(18px);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+        will-change: transform;
+
+}
+
+
+.contact-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(123,46,255,.35);
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.25);
+
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.contact-card__icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 16px;
+
+    font-size: 1.5rem;
+
+    background: rgba(123,46,255,.12);
+
+    border: 1px solid rgba(123,46,255,.25);
+
+    flex-shrink: 0;
+
+}
+
+
+.contact-card h3 {
+
+    margin-bottom: .4rem;
+
+    color: var(--color-text);
+
+}
+
+
+.contact-card p {
+
+    color: var(--color-text-secondary);
+
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.contact__form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    padding: 2rem;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, .03);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(18px);
+
+    will-change: transform;
+
+}
+
+/* ==========================================================
+   FORM GROUP
+========================================================== */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .6rem;
+
+}
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.form-group label {
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    color: var(--color-text);
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.form-group input,
+.form-group textarea {
+
+    appearance: none;
+
+    width: 100%;
+
+    padding: 1rem 1.2rem;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, .04);
+
+    color: var(--color-text);
+
+    font: inherit;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+
+}
+
+/* ==========================================================
+   PLACEHOLDER
+========================================================== */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: var(--color-text-secondary);
+
+    opacity: .7;
+
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: rgba(123, 46, 255, .55);
+
+    background: rgba(255, 255, 255, .06);
+
+    box-shadow:
+        0 0 0 4px rgba(123, 46, 255, .12);
+
+}
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.form-group textarea {
+
+    min-height: 180px;
+
+    max-height: 320px;
+
+    resize: vertical;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.contact__form .btn {
+
+    align-self: flex-start;
+
+    margin-top: .5rem;
+
+}
+
+/* ==========================================================
+   SHINE EFFECT
+========================================================== */
+
+.contact-card,
+.contact__form {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.contact-card::before,
+.contact__form::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 25%,
+        rgba(255,255,255,.08) 50%,
+        transparent 75%
+    );
+
+    transform: translateX(-150%);
+
+    transition: transform .8s ease;
+
+    pointer-events: none;
+
+}
+
+.contact-card:hover::before,
+.contact__form:hover::before {
+
+    transform: translateX(150%);
+
+}
+
+/* ==========================================================
+   FORM BUTTON
+========================================================== */
+
+.contact__form .btn {
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.contact__form .btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(123,46,255,.25);
+
+}
+
+/* ==========================================================
+   INPUT AUTOFILL
+========================================================== */
+
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill {
+
+    -webkit-text-fill-color: var(--color-text);
+
+    -webkit-box-shadow:
+    0 0 0 1000px rgba(255, 255, 255, .04) inset;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .contact {
+
+        padding: 6rem 0;
+
+    }
+
+    .contact__wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .contact__form {
+
+        padding: 1.75rem;
+
+    }
+
+    .contact-card {
+
+        padding: 1.25rem;
+
+    }
+
+    .contact-card__icon {
+
+        width: 54px;
+
+        height: 54px;
+
+        font-size: 1.3rem;
+
+    }
+
+    .contact__form .btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contact {
+
+        padding: 5rem 0;
+
+    }
+
+    .contact__wrapper {
+
+        margin-top: 3rem;
+
+    }
+
+    .contact__form {
+
+        padding: 1.5rem;
+
+        border-radius: 20px;
+
+    }
+
+    .contact-card {
+
+        border-radius: 18px;
+
+    }
+
+}

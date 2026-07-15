@@ -1,0 +1,393 @@
+/* ==========================================================
+   BASE.CSS
+   Projeto: Portfólio Laerte Alves
+   Parte 1 — Estrutura Global
+========================================================== */
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg-primary);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   FUNDO GLOBAL
+========================================================== */
+
+body::before{
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(123,46,255,.18),
+            transparent 45%),
+
+        radial-gradient(circle at bottom right,
+            rgba(0,229,255,.08),
+            transparent 40%),
+
+        linear-gradient(
+            180deg,
+            #08050F 0%,
+            #0D0918 100%
+        );
+
+    z-index: var(--z-background);
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   GRID TECNOLÓGICO
+========================================================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:50px 50px;
+
+    opacity:.35;
+
+    pointer-events:none;
+
+    z-index:calc(var(--z-background) + 1);
+}
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+main{
+
+    position:relative;
+
+    z-index:var(--z-content);
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(
+        100% - (var(--container-padding) * 2),
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.section{
+
+    position:relative;
+
+    padding-block:var(--space-10);
+
+}
+
+/* ==========================================================
+   HEADER DAS SEÇÕES
+========================================================== */
+
+.section-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+    margin-bottom:var(--space-9);
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   TAG SUPERIOR
+========================================================== */
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.6rem;
+
+    padding:.45rem 1rem;
+
+    border-radius:var(--radius-pill);
+
+    border:var(--border-glow);
+
+    background:rgba(123,46,255,.08);
+
+    color:var(--color-primary-light);
+
+    font-family:var(--font-code);
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+}
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.section-title{
+
+    font-size:clamp(2.5rem,5vw,4.5rem);
+
+    font-family:var(--font-title);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+    line-height:1;
+
+}
+
+.section-description{
+
+    max-width:720px;
+
+    color:var(--color-text-secondary);
+
+    font-size:1.1rem;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.grid{
+
+    display:grid;
+
+    gap:var(--space-6);
+
+}
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:var(--space-6);
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:var(--space-6);
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:var(--space-6);
+
+}
+
+/* ==========================================================
+   FLEX
+========================================================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================================================
+   GAP
+========================================================== */
+
+.gap-sm{
+
+    gap:var(--space-3);
+
+}
+
+.gap-md{
+
+    gap:var(--space-5);
+
+}
+
+.gap-lg{
+
+    gap:var(--space-8);
+
+}
+
+/* ==========================================================
+   WIDTH
+========================================================== */
+
+.w-full{
+
+    width:100%;
+
+}
+
+.h-full{
+
+    height:100%;
+
+}
+
+/* ==========================================================
+   SPACING
+========================================================== */
+
+.mt-auto{
+
+    margin-top:auto;
+
+}
+
+.mx-auto{
+
+    margin-inline:auto;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width:1024px){
+
+    .grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section{
+
+        padding-block:6rem;
+
+    }
+
+}
+
+body.is-loading{
+    overflow:hidden;
+}
+
+body.menu-open {
+
+    overflow: hidden;
+
+}
+
+/* ===========================
+   MOBILE MENU LOCK
+=========================== */
+
+body.menu-open {
+
+    overflow: hidden;
+
+}

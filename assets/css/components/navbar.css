@@ -1,0 +1,326 @@
+/* ==========================================================
+   NAVBAR.CSS
+   Projeto: Portfólio Laerte Alves
+   ========================================================== */
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+
+    z-index: var(--z-header);
+
+    transition:
+        background .4s ease,
+        backdrop-filter .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+.header.header--scrolled {
+
+    background: rgba(8, 5, 15, .75);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(123,46,255,.18);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+
+    width: 100%;
+
+}
+
+.navbar .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: var(--header-height);
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.navbar__logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+    font-family: var(--font-title);
+
+    font-size: 1.3rem;
+
+    font-weight: var(--fw-bold);
+
+    letter-spacing: .12rem;
+
+    color: var(--color-text);
+
+    transition: .35s;
+
+}
+
+.navbar__logo span {
+
+    color: var(--color-primary-light);
+
+    text-shadow: var(--glow-purple);
+
+}
+
+.navbar__logo:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+.navbar__menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.navbar__link {
+
+    position: relative;
+
+    padding: .5rem 0;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+    color: var(--color-text-secondary);
+
+    transition: .35s;
+
+}
+
+.navbar__link:hover {
+
+    color: var(--color-text);
+
+}
+
+/* Linha inferior */
+
+.navbar__link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--gradient-primary);
+
+    border-radius: 999px;
+
+    transition: width .35s ease;
+
+}
+
+.navbar__link:hover::after {
+
+    width: 100%;
+
+}
+
+/* Link ativo */
+
+.navbar__link.active {
+
+    color: var(--color-primary-light);
+
+}
+
+.navbar__link.active::after {
+
+    width: 100%;
+
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.navbar__cta {
+
+    padding: .85rem 1.5rem;
+
+    border-radius: var(--radius-pill);
+
+    border: var(--border-glow);
+
+    background: rgba(123,46,255,.08);
+
+    color: var(--color-text);
+
+    transition: .35s;
+
+}
+
+.navbar__cta:hover {
+
+    transform: translateY(-3px);
+
+    background: rgba(123,46,255,.18);
+
+    box-shadow: var(--glow-purple);
+
+}
+
+/* ===========================
+   MENU MOBILE
+=========================== */
+
+.navbar__toggle {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+}
+
+.navbar__toggle span {
+
+    width: 28px;
+
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: var(--color-text);
+
+    transition: 
+    transform .35s ease,
+    opacity .35s ease;
+
+    transform-origin: center;
+
+}
+
+/* ===========================
+   TOGGLE ACTIVE
+=========================== */
+
+.navbar__toggle.active span:nth-child(1) {
+
+    transform: translateY(9px) rotate(45deg);
+
+}
+
+.navbar__toggle.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.navbar__toggle.active span:nth-child(3) {
+
+    transform: translateY(-9px) rotate(-45deg);
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width: 992px) {
+
+    .navbar__toggle {
+
+        display: flex;
+
+    }
+
+    .navbar__menu {
+
+        position: fixed;
+
+        top: var(--header-height);
+
+        right: -100%;
+
+        width: 320px;
+
+        height: calc(100vh - var(--header-height));
+
+        background: rgba(10,8,18,.96);
+
+        backdrop-filter: blur(25px);
+
+        border-left: var(--border-light);
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 2rem;
+
+        transition: right .45s ease;
+
+    }
+
+    .navbar__menu.active {
+
+        right: 0;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar__cta {
+        display: none;
+    }
+}

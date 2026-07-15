@@ -1,0 +1,194 @@
+/* ==========================================================
+   FONTS.CSS
+   Projeto: Portfólio Laerte Alves
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   Google Fonts
+---------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ----------------------------------------------------------
+   Tipografia Base
+---------------------------------------------------------- */
+
+body {
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   Hierarquia de Títulos
+---------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+    font-weight: var(--fw-bold);
+    line-height: 1.1;
+    letter-spacing: .05em;
+}
+
+
+/* Hero */
+
+h1{
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+/* Seções */
+
+h2{
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+/* Cards */
+
+h3{
+    font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+/* Pequenos títulos */
+
+h4{
+    font-size: 1.25rem;
+}
+
+h5{
+    font-size: 1.1rem;
+}
+
+h6{
+    font-size: 1rem;
+}
+
+
+/* ----------------------------------------------------------
+   Parágrafos
+---------------------------------------------------------- */
+
+p{
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+
+/* ----------------------------------------------------------
+   Links
+---------------------------------------------------------- */
+
+a{
+    font-family: var(--font-body);
+}
+
+
+/* ----------------------------------------------------------
+   Código
+---------------------------------------------------------- */
+
+code,
+pre,
+kbd,
+samp{
+    font-family: var(--font-code);
+}
+
+
+/* ----------------------------------------------------------
+   Texto Selecionável
+---------------------------------------------------------- */
+
+strong{
+    font-weight: var(--fw-bold);
+}
+
+em{
+    font-style: italic;
+}
+
+
+/* ----------------------------------------------------------
+   Classes Utilitárias
+---------------------------------------------------------- */
+
+.font-title{
+    font-family: var(--font-title);
+}
+
+.font-body{
+    font-family: var(--font-body);
+}
+
+.font-code{
+    font-family: var(--font-code);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.text-gradient{
+
+    background: var(--gradient-primary);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+.text-glow{
+    text-shadow: var(--glow-purple);
+}
+
+.text-muted{
+    color: var(--color-text-muted);
+}
+
+.text-secondary{
+    color: var(--color-text-secondary);
+}
+
+.text-primary{
+    color: var(--color-primary);
+}
+
+
+/* ----------------------------------------------------------
+   Seleção
+---------------------------------------------------------- */
+
+::selection{
+    background: rgba(123,46,255,.35);
+}

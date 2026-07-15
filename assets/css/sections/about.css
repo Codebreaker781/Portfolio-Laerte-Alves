@@ -1,0 +1,375 @@
+/* ==========================================================
+   ABOUT
+========================================================== */
+
+.about {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 8rem 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(123, 46, 255, 0.08),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(0, 212, 255, 0.06),
+            transparent 45%
+        );
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.about__content {
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 4rem;
+
+    align-items: center;
+
+    margin-top: 4rem;
+
+}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.about__text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.75rem;
+
+}
+
+.about__text p {
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: var(--color-text-secondary);
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.about__buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.about__cards {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+}
+
+/* ==========================================================
+   ABOUT HUD PANELS
+========================================================== */
+
+.about__cards .hud-panel {
+
+    position: relative;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.about__cards .hud-panel:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(123, 46, 255, .45);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .30);
+
+}
+
+/* ==========================================================
+   TITLES
+========================================================== */
+
+.about__cards .hud-panel__title {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .6rem;
+
+    margin-bottom: 1.25rem;
+
+}
+
+.about__cards .hud-panel__title::before {
+
+    content: "";
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    box-shadow:
+        0 0 10px var(--color-primary);
+
+}
+
+/* ==========================================================
+   PROFILE LIST
+========================================================== */
+
+.about__cards .hud-panel ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+}
+
+.about__cards .hud-panel li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding-bottom: .8rem;
+
+    border-bottom: 1px solid rgba(255,255,255,.06);
+
+}
+
+.about__cards .hud-panel li:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 0;
+
+}
+
+.about__cards .hud-panel strong {
+
+    color: var(--color-text-secondary);
+
+    font-weight: 500;
+
+}
+
+.about__cards .hud-panel span {
+
+    color: var(--color-text);
+
+    font-weight: 600;
+
+    text-align: right;
+
+}
+
+/* ==========================================================
+   MISSION TEXT
+========================================================== */
+
+.about__cards .hud-panel p {
+
+    line-height: 1.8;
+
+    color: var(--color-text-secondary);
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+.about__cards .hud-panel {
+
+    overflow: hidden;
+
+}
+
+.about__cards .hud-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, .08),
+        transparent
+    );
+
+    transition: left .8s ease;
+
+}
+
+.about__cards .hud-panel:hover::after {
+
+    left: 150%;
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .about {
+
+        padding: 6rem 0;
+
+    }
+
+    .about__content {
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+    }
+
+    .about__text {
+
+        order: 1;
+
+    }
+
+    .about__cards {
+
+        order: 2;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .about__content {
+
+        gap: 2.5rem;
+
+    }
+
+    .about__cards{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:1rem;
+
+    }
+
+    .about__cards > *{
+
+        width:100%;
+
+        max-width:340px;
+
+    }
+
+    .about__text p {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+    .about__buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .about__buttons .btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about {
+
+        padding: 5rem 0;
+
+    }
+
+    .about__content {
+
+        margin-top: 3rem;
+
+    }
+
+    .about__cards .hud-panel {
+
+        padding: 1.5rem;
+
+    }
+
+}

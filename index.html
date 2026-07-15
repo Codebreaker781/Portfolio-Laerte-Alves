@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- ==========================
+         META
+    =========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Portfólio de Laerte Alves - Desenvolvedor Front-end apaixonado por tecnologia, jogos e experiências digitais.">
+
+    <meta
+        name="keywords"
+        content="Portfólio, Front-end, HTML, CSS, JavaScript, Desenvolvedor">
+
+    <meta
+        name="author"
+        content="Laerte Alves">
+
+    <title>Laerte Alves | Front-end Developer</title>
+
+<!-- =====================================================
+     CSS - BASE
+====================================================== -->
+
+    <link
+    rel="stylesheet"
+    href="assets/css/components/audio.css">
+
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/base/variables.css">
+    <link rel="stylesheet" href="assets/css/base/fonts.css">
+    <link rel="stylesheet" href="assets/css/base/base.css">
+    <link rel="stylesheet" href="assets/css/base/layout.css">
+
+    <!-- =====================================================
+        CSS - COMPONENTS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="assets/css/components/button.css">
+    <link rel="stylesheet" href="assets/css/components/cursor.css">
+    <link rel="stylesheet" href="assets/css/components/hud-panel.css">
+    <link rel="stylesheet" href="assets/css/components/loader.css">
+    <link rel="stylesheet" href="assets/css/components/navbar.css">
+    <link rel="stylesheet" href="assets/css/components/particles.css">
+    <link rel="stylesheet" href="assets/css/components/player-card.css">
+
+    <!-- =====================================================
+        CSS - SECTIONS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="assets/css/sections/about.css">
+    <link rel="stylesheet" href="assets/css/sections/contact.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/sections/hero.css">
+    <link rel="stylesheet" href="assets/css/sections/projects.css">
+    <link rel="stylesheet" href="assets/css/sections/skills.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         LOADER
+    ====================================================== -->
+
+    <div class="loader">
+
+        <div class="loader__container">
+
+            <h1 class="loader__logo">
+                LAERTE.EXE
+            </h1>
+
+            <div class="loader__terminal">
+
+            </div>
+
+            <div class="loader__progress">
+
+                <div class="loader__bar">
+
+                    <div class="loader__fill"></div>
+
+                </div>
+
+                <div class="loader__percentage">
+
+                    0%
+
+                </div>
+
+            </div>
+
+            <div class="loader__status">
+
+                INITIALIZING...
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="container">
+
+                <!-- Logo -->
+
+                <a
+                    href="#home"
+                    class="navbar__logo">
+
+                    <span>&lt;LA /&gt;</span>
+
+                </a>
+
+                <!-- Menu -->
+
+                <ul class="navbar__menu">
+
+                    <li>
+
+                        <a
+                            href="#home"
+                            class="navbar__link active">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a
+                            href="#about"
+                            class="navbar__link">
+
+                            Sobre
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a
+                            href="#skills"
+                            class="navbar__link">
+
+                            Habilidades
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a
+                            href="#projects"
+                            class="navbar__link">
+
+                            Projetos
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a
+                            href="#contact"
+                            class="navbar__link">
+
+                            Contato
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+                <a
+                    href="#contact"
+                    class="navbar__cta">
+
+                    Vamos conversar
+
+                </a>
+
+                <!-- Mobile -->
+
+                <button
+                    class="navbar__toggle"
+                    aria-label="Abrir menu"
+                    aria-expanded="false">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+<!-- ===================================================== HERO ====================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero__background">
+
+        <div class="hero__grid"></div>
+
+        <div class="hero__glow"></div>
+
+        <span class="hero__line"></span>
+        <span class="hero__line"></span>
+
+        <!-- Futuramente:
+             Partículas
+             Cubos wireframe
+             Scanner
+             Binary rain
+        -->
+
+    </div>
+
+    <div class="container">
+
+        <!-- ==========================
+             Texto
+        =========================== -->
+
+        <div class="hero__content">
+
+            <span class="hero__tag">
+
+                SYSTEM ONLINE
+
+            </span>
+
+            <h1 class="hero__title">
+
+                <span>LAERTE</span>
+
+                <span>ALVES</span>
+
+            </h1>
+
+            <p class="hero__subtitle">
+
+                Desenvolvedor Front-end apaixonado por criar interfaces modernas,
+                experiências imersivas e projetos inspirados no universo dos games.
+
+            </p>
+
+            <div class="hero__buttons">
+
+                <a href="#projects" class="btn btn--primary">
+
+                    Ver Projetos
+
+                </a>
+
+                <a href="#contact" class="btn btn--secondary">
+
+                    Entrar em Contato
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+             Player Card
+        =========================== -->
+
+        <div class="hero__visual">
+
+            <div class="hero__orb hero__orb--1"></div>
+            <div class="hero__orb hero__orb--2"></div>
+            <div class="hero__orb hero__orb--3"></div>
+
+            <div class="hero__decor hero__decor--square"></div>
+            <div class="hero__decor hero__decor--line"></div>
+
+            <div class="player-card">
+
+                <!-- Scanner -->
+
+                <div class="player-card__scan"></div>
+
+                <!-- Glow -->
+
+                <div class="player-card__glow"></div>
+
+                <!-- Moldura -->
+
+                <div class="player-card__border"></div>
+
+                <!-- Foto -->
+
+                <img
+                    src="assets/images/hero/laerte.png"
+                    alt="Laerte Alves"
+                    class="player-card__image">
+
+                <!-- Status -->
+
+                <div class="player-card__status">
+
+                    <span></span>
+
+                    ONLINE
+
+                </div>
+
+                <!-- Informações -->
+
+                <div class="player-card__info">
+
+                    <h3>
+
+                        LEVEL 01
+
+                    </h3>
+
+                    <p>
+
+                        Front-end Developer
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- HUD -->
+
+            <div class="hud-panel">
+
+                <span class="hud-panel__title">
+
+                    PLAYER PROFILE
+
+                </span>
+
+                <ul>
+
+                    <li>
+                        <strong>STATUS</strong>
+                        <span>ONLINE</span>
+                    </li>
+
+                    <li>
+                        <strong>CLASS</strong>
+                        <span>Front-end</span>
+                    </li>
+
+                    <li>
+                        <strong>FOCUS</strong>
+                        <span>Creative Interfaces</span>
+                    </li>
+
+                    <li>
+                        <strong>LOCATION</strong>
+                        <span>Brazil</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- =====================================================
+         SOBRE
+    ====================================================== -->
+
+    <section id="about" class="section about">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    SOBRE MIM
+                </span>
+
+                <h2 class="section-title">
+                    Muito prazer,
+                    <span>eu sou o Laerte.</span>
+                </h2>
+
+            </div>
+
+            <div class="about__content">
+
+                <!-- Lado esquerdo -->
+
+                <div class="about__text">
+
+                    <p>
+
+                        Sou um desenvolvedor Front-end apaixonado por tecnologia,
+                        desenvolvimento web e pelo universo dos games. Estou
+                        constantemente aprendendo novas tecnologias e criando
+                        projetos que unem design moderno, interatividade e uma
+                        ótima experiência para o usuário.
+
+                    </p>
+
+                    <p>
+
+                        Meu objetivo é transformar ideias em interfaces bonitas,
+                        responsivas e funcionais, sempre buscando evoluir como
+                        desenvolvedor e entregar projetos cada vez melhores.
+
+                    </p>
+
+                    <div class="about__buttons">
+
+                        <a href="#projects" class="btn btn--primary">
+                            Ver Projetos
+                        </a>
+
+                        <a href="#contact" class="btn btn--secondary">
+                            Vamos conversar
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Lado direito -->
+
+                <div class="about__cards">
+
+                    <article class="hud-panel">
+
+                        <span class="hud-panel__title">
+
+                            PROFILE
+
+                        </span>
+
+                        <ul>
+
+                            <li>
+
+                                <strong>Nome</strong>
+
+                                <span>Laerte Alves</span>
+
+                            </li>
+
+                            <li>
+
+                                <strong>Especialidade</strong>
+
+                                <span>Front-end</span>
+
+                            </li>
+
+                            <li>
+
+                                <strong>Status</strong>
+
+                                <span>Disponível</span>
+
+                            </li>
+
+                            <li>
+
+                                <strong>Experiência</strong>
+
+                                <span>Projetos pessoais</span>
+
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+                    <article class="hud-panel">
+
+                        <span class="hud-panel__title">
+
+                            MISSÃO
+
+                        </span>
+
+                        <p>
+
+                            Desenvolver interfaces criativas, modernas e
+                            inspiradas no universo gamer, proporcionando uma
+                            experiência memorável para cada visitante.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- =====================================================
+         HABILIDADES
+    ====================================================== -->
+
+    <section id="skills" class="section skills">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    HABILIDADES
+                </span>
+
+                <h2 class="section-title">
+                    Tecnologias que utilizo
+                </h2>
+
+                <p class="section-description">
+                    Ferramentas e tecnologias que fazem parte da minha jornada
+                    como desenvolvedor Front-end.
+                </p>
+
+            </div>
+
+            <div class="skills__grid">
+
+                <!-- HTML -->
+
+                <article class="skill-card">
+
+                    <div class="skill-card__icon">
+
+                        <img
+                            src="assets/images/icons/html5.svg"
+                            alt="HTML5">
+
+                    </div>
+
+                    <h3>HTML5</h3>
+
+                    <p>
+                        Estruturação semântica, acessibilidade e boas práticas.
+                    </p>
+
+                    <div class="skill-card__level">
+
+                        <span style="width:95%"></span>
+
+                    </div>
+
+                </article>
+
+                <!-- CSS -->
+
+                <article class="skill-card">
+
+                    <div class="skill-card__icon">
+
+                        <img
+                            src="assets/images/icons/css3.svg"
+                            alt="CSS3">
+
+                    </div>
+
+                    <h3>CSS3</h3>
+
+                    <p>
+                        Layouts responsivos, Flexbox, Grid e animações.
+                    </p>
+
+                    <div class="skill-card__level">
+
+                        <span style="width:92%"></span>
+
+                    </div>
+
+                </article>
+
+                <!-- JavaScript -->
+
+                <article class="skill-card">
+
+                    <div class="skill-card__icon">
+
+                        <img
+                            src="assets/images/icons/javascript.svg"
+                            alt="JavaScript">
+
+                    </div>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Desenvolvimento de interfaces interativas e dinâmicas.
+                    </p>
+
+                    <div class="skill-card__level">
+
+                        <span style="width:80%"></span>
+
+                    </div>
+
+                </article>
+
+                <!-- Git -->
+
+                <article class="skill-card">
+
+                    <div class="skill-card__icon">
+
+                        <img
+                            src="assets/images/icons/git.svg"
+                            alt="Git">
+
+                    </div>
+
+                    <h3>Git</h3>
+
+                    <p>
+                        Versionamento de código e controle de projetos.
+                    </p>
+
+                    <div class="skill-card__level">
+
+                        <span style="width:75%"></span>
+
+                    </div>
+
+                </article>
+
+                <!-- GitHub -->
+
+                <article class="skill-card">
+
+                    <div class="skill-card__icon">
+
+                        <img
+                            src="assets/images/icons/github.svg"
+                            alt="GitHub">
+
+                    </div>
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Hospedagem, colaboração e gerenciamento de repositórios.
+                    </p>
+
+                    <div class="skill-card__level">
+
+                        <span style="width:82%"></span>
+
+                    </div>
+
+                </article>
+
+                <!-- VS Code -->
+
+                <article class="skill-card">
+
+                    <div class="skill-card__icon">
+
+                        <img
+                            src="assets/images/icons/vscode.svg"
+                            alt="VS Code">
+
+                    </div>
+
+                    <h3>VS Code</h3>
+
+                    <p>
+                        Principal ambiente de desenvolvimento utilizado nos projetos.
+                    </p>
+
+                    <div class="skill-card__level">
+
+                        <span style="width:90%"></span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- =====================================================
+         PROJETOS
+    ====================================================== -->
+
+    <section id="projects" class="section projects">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    PROJETOS
+                </span>
+
+                <h2 class="section-title">
+                    Alguns dos meus trabalhos
+                </h2>
+
+                <p class="section-description">
+                    Projetos desenvolvidos para praticar, evoluir minhas
+                    habilidades e criar experiências digitais modernas.
+                </p>
+
+            </div>
+
+            <div class="projects__grid">
+
+                <!-- Projeto 01 -->
+
+                <article class="project-card">
+
+                    <div class="project-card__image">
+
+                        <img
+                            src="assets/images/projects/projeto-01.jpg"
+                            alt="Projeto 01">
+
+                        <div class="project-card__overlay">
+
+                            <a href="#" class="btn btn--primary">
+                                Ver Projeto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-card__content">
+
+                        <span class="project-card__category">
+                            Front-end
+                        </span>
+
+                        <h3>
+                            Portfólio Interativo
+                        </h3>
+
+                        <p>
+
+                            Projeto desenvolvido com HTML, CSS e JavaScript,
+                            focado em animações, responsividade e experiência
+                            do usuário.
+
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- Projeto 02 -->
+
+                <article class="project-card">
+
+                    <div class="project-card__image">
+
+                        <img
+                            src="assets/images/projects/projeto-02.jpg"
+                            alt="Projeto 02">
+
+                        <div class="project-card__overlay">
+
+                            <a href="#" class="btn btn--primary">
+                                Ver Projeto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-card__content">
+
+                        <span class="project-card__category">
+                            Landing Page
+                        </span>
+
+                        <h3>
+                            Página Comercial
+                        </h3>
+
+                        <p>
+
+                            Landing page moderna desenvolvida com foco em
+                            conversão, velocidade e design responsivo.
+
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- Projeto 03 -->
+
+                <article class="project-card">
+
+                    <div class="project-card__image">
+
+                        <img
+                            src="assets/images/projects/projeto-03.jpg"
+                            alt="Projeto 03">
+
+                        <div class="project-card__overlay">
+
+                            <a href="#" class="btn btn--primary">
+                                Ver Projeto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-card__content">
+
+                        <span class="project-card__category">
+                            JavaScript
+                        </span>
+
+                        <h3>
+                            Sistema Web
+                        </h3>
+
+                        <p>
+
+                            Aplicação criada utilizando JavaScript para gerar
+                            maior interatividade e dinamismo.
+
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- =====================================================
+         CONTATO
+    ====================================================== -->
+
+    <section id="contact" class="section contact">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    CONTATO
+                </span>
+
+                <h2 class="section-title">
+                    Vamos criar algo incrível juntos.
+                </h2>
+
+                <p class="section-description">
+
+                    Tem um projeto em mente, uma oportunidade ou apenas quer trocar uma ideia sobre tecnologia? Entre em contato. Será um prazer conversar com você.
+
+                </p>
+
+            </div>
+
+            <div class="contact__wrapper">
+
+                <!-- Informações -->
+
+                <div class="contact__info">
+
+                    <article class="contact-card">
+
+                        <div class="contact-card__icon">
+
+                            📧
+
+                        </div>
+
+                        <div>
+
+                            <h3>E-mail</h3>
+
+                            <p>laerte@email.com</p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="contact-card">
+
+                        <div class="contact-card__icon">
+
+                            💬
+
+                        </div>
+
+                        <div>
+
+                            <h3>WhatsApp</h3>
+
+                            <p>(00) 00000-0000</p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="contact-card">
+
+                        <div class="contact-card__icon">
+
+                            📍
+
+                        </div>
+
+                        <div>
+
+                            <h3>Localização</h3>
+
+                            <p>Brasil</p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Formulário -->
+
+                <form class="contact__form">
+
+                    <div class="form-group">
+
+                        <label for="name">
+
+                            Nome
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Seu nome">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">
+
+                            E-mail
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seu@email.com">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="subject">
+
+                            Assunto
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Assunto">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="message">
+
+                            Mensagem
+
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="6"
+                            placeholder="Escreva sua mensagem..."></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn--primary">
+
+                        Enviar Mensagem
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__content">
+
+                <div class="footer__brand">
+
+                    <h2 class="footer__logo">
+
+                        &lt;LA /&gt;
+
+                    </h2>
+
+                    <p>
+
+                        Desenvolvendo experiências digitais modernas,
+                        criativas e inspiradas no universo dos games.
+
+                    </p>
+
+                </div>
+
+                <div class="footer__social">
+
+                    <a href="#" aria-label="GitHub">
+
+                        GitHub
+
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+
+                        LinkedIn
+
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+
+                        Instagram
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+
+                <p>
+
+                    © <span class="current-year"></span> Laerte Alves.
+                    Todos os direitos reservados.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</main>
+
+<!-- =====================================================
+     BOTÃO VOLTAR AO TOPO
+====================================================== -->
+
+<button
+    class="back-to-top"
+    aria-label="Voltar ao topo">
+
+    ↑
+
+</button>
+
+<!-- =====================================================
+     PARTICLES
+====================================================== -->
+
+<div id="particles-container"></div>
+
+<!-- ==========================================================
+     AUDIO PLAYER
+=========================================================== -->
+
+<div class="audio-player">
+
+    <div class="audio-player__toast">
+
+        <span class="audio-player__label">
+
+            ♫ NOW PLAYING
+
+        </span>
+
+        <h3 class="audio-player__title"></h3>
+
+        <p class="audio-player__artist"></p>
+
+    </div>
+
+    <button
+        class="audio-player__toggle"
+        aria-label="Ativar música">
+
+        🔊
+
+    </button>
+
+    <audio id="audio-player"></audio>
+
+</div>
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<!-- =====================================================
+     GSAP
+====================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<!-- =====================================================
+     CORE
+====================================================== -->
+
+<script src="assets/js/core/cursor.js"></script>
+<script src="assets/js/core/loader.js"></script>
+<script src="assets/js/core/scroll.js"></script>
+
+<!-- =====================================================
+     ANIMATIONS
+====================================================== -->
+
+<script src="assets/js/animations/about.js"></script>
+<script src="assets/js/animations/contact.js"></script>
+<script src="assets/js/animations/hero.js"></script>
+<script src="assets/js/animations/navbar.js"></script>
+<script src="assets/js/animations/projects.js"></script>
+<script src="assets/js/animations/skills.js"></script>
+
+<!-- =====================================================
+     EFFECTS
+====================================================== -->
+
+<script src="assets/js/effects/glitch.js"></script>
+<script src="assets/js/effects/particles.js"></script>
+<script src="assets/js/effects/scanner.js"></script>
+<script src="assets/js/effects/typing.js"></script>
+<script src="assets/js/effects/audio.js"></script>
+
+<!-- =====================================================
+     APP
+====================================================== -->
+
+<script src="assets/js/core/app.js"></script>
+
+</body>
+</html>
